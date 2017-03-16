@@ -1,4 +1,5 @@
 -- http://stackoverflow.com/questions/11070623/lua-send-mail-with-gmail-account
+-- http://stackoverflow.com/questions/29312494/sending-email-using-luasocket-smtp-and-ssl
 -- Michal Kottman, 2011, public domain
 local socket = require 'socket'
 local smtp = require 'socket.smtp'
