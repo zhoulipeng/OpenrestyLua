@@ -29,7 +29,7 @@ function sslCreate()
         end
     })
 end
-
+local pass = ...
 function sendMessage(subject, body)
     local msg = {
         headers = {
@@ -45,7 +45,7 @@ function sendMessage(subject, body)
         rcpt = '<zhoulpg@aliyun.com>',
         source = smtp.message(msg),
         user = "zhoulpg@gmail.com",
-        password = "default",
+        password = pass,
         server = 'smtp.gmail.com',
         port = 465,
         create = sslCreate

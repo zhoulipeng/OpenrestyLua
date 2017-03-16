@@ -29,7 +29,8 @@ function sslCreate()
         end
     })
 end
-
+-- luajit this.lua "emaill password"
+local pass = ...
 function sendMessage(subject, body)
     local msg = {
         headers = {
@@ -44,7 +45,7 @@ function sendMessage(subject, body)
         rcpt = '<zhoulpg@aliyun.com>',
         source = smtp.message(msg),
         user = "zlpayqiong@163.com",
-        password = "default",
+        password = pass,
         server = 'smtp.163.com',
         port = 465,
         create = sslCreate
@@ -54,4 +55,4 @@ function sendMessage(subject, body)
     end
 end
 
-sendMessage("nihao", "How are you!")
+sendMessage("nihao", "How are you!  你好")
