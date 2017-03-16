@@ -40,7 +40,7 @@ function _M.send(self)
             ["content-type"] = "text/plain; charset='utf-8'",
         },
 
-        body= mime.qp("中文内容，HELLO WORLD."),
+        body= mime.qp("中文内容，HELLO WORLD.")
     }
     local r, e = smtp.send {
         from= config.from,   -- e.g. "<user@sender.com>"
